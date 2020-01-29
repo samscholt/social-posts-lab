@@ -1,5 +1,11 @@
-<form (submit)="submitPost(subject, body)">
-    <input type="text" [(ngModel)]="subject" name="subject">
-    <input type="text" [(ngModel)]="body" name="body">
-    <button type="submit">Add Post</button>
-</form>
+<div id="form-container">
+    <form (submit)="submitPost(subject, body)">
+        <label for="subject">Title</label>
+        <input type="text" [(ngModel)]="subject" name="subject">
+        
+        <label for="body">Thought</label>
+        <textarea [(ngModel)]="body" name="body" rows=4></textarea>
+        
+        <button type="submit">Add Post</button>
+    </form>
+</div>

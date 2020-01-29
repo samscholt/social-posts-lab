@@ -11,7 +11,9 @@ export class PostFormComponent implements OnInit {
   constructor() { }
 
   submitPost(subject : string, body: string) {
-    this.submitted.emit({title: subject, thought: body});
+    if (subject && body) {
+      this.submitted.emit({title: subject, thought: body});
+    }
   }
 
   ngOnInit() {
