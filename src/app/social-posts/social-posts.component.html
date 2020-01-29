@@ -1,10 +1,12 @@
 <div id="container">
     <h1>My Thoughts</h1>
-    <button>New Thought</button>
+    <button (click)="toggleVisibility()">New Thought</button>
 
-    <app-post-form (submitted)="onSubmit($event)"></app-post-form>
+    <div id="form-container" [hidden]="!formVisible">
+        <app-post-form (submitted)="onSubmit($event)"></app-post-form>
+    </div>
 
     <div id="post-container">
         <app-post *ngFor="let singlePost of postList; let i = index;" (deleted)="onDelete(i)" [post]="singlePost"></app-post>
     </div>
-<div>
+</div>
