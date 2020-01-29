@@ -1,0 +1,5 @@
+<form (submit)="submitPost(subject, body)">
+    <input type="text" [(ngModel)]="subject" name="subject">
+    <input type="text" [(ngModel)]="body" name="body">
+    <button type="submit">Add Post</button>
+</form>

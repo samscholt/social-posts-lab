@@ -1,0 +1,8 @@
+<h1>My thoughts</h1>
+<button>New Thought</button>
+
+<app-post-form (submitted)="onSubmit($event)"></app-post-form>
+
+<div>
+    <app-post *ngFor="let singlePost of postList; let i = index;" (deleted)="onDelete(i)" [post]="singlePost"></app-post>
+</div>
